@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+h1 {
+  font-size: 25px;
+  margin: 30px 60px 5px 60px;
+}
+
+h2 {
+  padding-top: 35px;
+}
+
+h3 {
+  margin-bottom: -15px;
+}
+
+body {
+  font-family: roboto, arial, serif;
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 0px 10px white;
+}
+header .header__logo {
+  transform: scale(0.5);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .main__localisation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #EAEAEA;
+  font-size: 18px;
+  padding: 20px 0px 20px 0px;
+}
+main .main__localisation .fas {
+  font-size: 20px;
+  padding-right: 15px;
+}
+main .main__explorer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+main .main__explorer p {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+main .main__explorer .bouton-explorer {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  border-radius: 30px;
+  padding: 17px;
+  font-size: 17px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 8px 8px 10px #EAEAEA;
+  color: white;
+  text-decoration: none;
+}
+main .main__fonctionnement .fonctionnement__etape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  counter-reset: etape;
+  margin-bottom: 65px;
+}
+main .main__fonctionnement .fonctionnement__etape li {
+  list-style-type: none;
+  counter-increment: etape;
+  width: 250px;
+  padding: 30px 40px 30px 40px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 10px #EAEAEA;
+  background-color: #F6F6F6;
+  margin-top: 30px;
+}
+main .main__fonctionnement .fonctionnement__etape li:before {
+  content: counter(etape);
+  padding: 6px 9px;
+  margin-left: -55px;
+  margin-right: 20px;
+  vertical-align: top;
+  background: #9356DC;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+}
+main .main__fonctionnement .fonctionnement__etape li .fas {
+  margin-right: 25px;
+  color: gray;
+}
+
+aside {
+  background-color: #F6F6F6;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+aside h2 {
+  padding-top: 55px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+aside .restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+aside .restaurant span {
+  background-color: #99E2D0;
+  color: #129273;
+  position: relative;
+  top: 50px;
+  left: 140px;
+  font-size: 12px;
+  padding: 4px 8px 4px 8px;
+  border-radius: 3px;
+}
+aside .restaurant figure {
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+  box-shadow: 8px 8px 10px #EAEAEA;
+  margin-top: 0px;
+}
+aside .restaurant figure img {
+  object-fit: cover;
+  width: 375px;
+  height: 200px;
+  border-radius: 20px 20px 0px 0px;
+}
+aside .restaurant figure figcaption {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding-left: 15px;
+}
+aside .restaurant figure figcaption p {
+  font-size: 17px;
+}
+aside .restaurant figure figcaption .coeur {
+  background: none;
+  color: black;
+  position: relative;
+  font-size: 27px;
+  top: -65px;
+  left: 300px;
+}
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+}
+footer .logo-nb {
+  display: flex;
+  margin-right: 330px;
+  margin-top: 20px;
+  filter: invert(100%);
+  transform: scale(0.5);
+}
+footer .menu-footer {
+  list-style: none;
+  padding-left: 20px;
+}
+footer .menu-footer a {
+  color: white;
+  text-decoration: none;
+  display: inline;
+}
+footer .menu-footer li {
+  margin-top: 10px;
+}
+footer .menu-footer li .fas {
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=style.css.map */
