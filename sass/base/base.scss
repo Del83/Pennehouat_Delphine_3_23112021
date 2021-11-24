@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
+
+$primary-color:#9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$fond-gris: #EAEAEA;
+$fond-grisclair: #F6F6F6;
+$primary-font: roboto, arial, serif;
+$secondary-font: shrikhand, arial, serif;
+
+
+$shadow: 8px 8px 10px $fond-gris;
+
+
+
+body {
+    font-family: $primary-font;
+    margin: 0px;
+}

@@ -1,0 +1,84 @@
+
+.main-menu {
+    height: 1645px;
+    img {
+        display: flex;
+        object-fit: cover;
+        width: 100%;
+        height: 250px;
+    }
+    .menu {
+        border-radius: 50px 50px 0px 0px;
+        position: relative;
+        bottom: 80px;
+        background-color: $fond-grisclair;
+        width: 100%;
+        padding-bottom: 80px;
+        h1 {
+            font-family: $secondary-font;
+            font-size: 30px;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        .coeur {
+            background: none;
+            color: black;
+            position: relative;
+            font-size: 27px;
+            top: -58px;
+            left: 350px;
+            }
+        
+        ul {
+            padding-left: 20px;
+            padding-right: 20px;
+            h2 {
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 50px;
+            }
+            li {
+                list-style: none;
+                background-color: white;
+                box-shadow: $shadow;
+                border-radius: 20px 20px 20px 20px;
+                h3 {
+                    margin: 0px;
+                    margin-top: 20px;
+                    padding-top: 15px;
+                    padding-left: 15px;
+                }
+                p {
+                    padding-left: 15px;
+                    margin: 0px;
+                    margin-top: 5px;
+                    font-weight: 300;
+                }
+                span {
+                    position: relative;
+                    left: 320px;
+                    bottom: 20px;
+                }
+            }
+        }    
+        .bouton {
+            @include bouton;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            padding: 17px 50px 17px 50px;
+            width: 120px;
+            margin-top: 80px;
+        } 
+    }
+
+
+
+    
+
+
+
+}
+
+

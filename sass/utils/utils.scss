@@ -1,0 +1,24 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin bouton {
+    border-radius: 30px;
+    font-size: 17px;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: $shadow;
+    color: white;
+    text-decoration: none;
+    }
