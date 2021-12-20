@@ -1,66 +1,148 @@
-
 .main-menu {
-    height: 1645px;
+    background-color: $fond-grisclair;
     img {
-        display: flex;
         object-fit: cover;
         width: 100%;
-        height: 250px;
+        height: 380px;
     }
+
+/* MENU DU RESTAURANT  */     
     .menu {
-        border-radius: 50px 50px 0px 0px;
         position: relative;
         bottom: 80px;
+        border-radius: 50px 50px 0px 0px;
         background-color: $fond-grisclair;
         width: 100%;
-        padding-bottom: 80px;
-        h1 {
-            font-family: $secondary-font;
-            font-size: 30px;
+        .nom-resto {
+            display: flex;
+            margin-top: 10px;
             padding-left: 20px;
-            padding-top: 20px;
+            h1 {
+                font-family: $secondary-font;
+                font-size: 30px;
+                width: 70%;
+            }   
+            .coeur {
+                @include flex-column-center;
+                justify-content: center;
+                width: 28%;
+                .fas {
+                    opacity: 1;
+                    font-size: 27px;
+                    font-weight: 10;
+                    cursor: pointer;
+                    &:active {
+                        font-weight: 900;
+                        background  : linear-gradient(45deg, #FF79DA, #9356dc);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        animation: select-favori 600ms forwards;
+                    }
+                }    
+            }
         }
-        .coeur {
-            background: none;
-            color: black;
-            position: relative;
-            font-size: 27px;
-            top: -58px;
-            left: 350px;
-            }
-        
-        ul {
-            padding-left: 20px;
-            padding-right: 20px;
+
+/* CATEGORIES DU MENU  */     
+        .cat {
+            margin-bottom: 50px;
             h2 {
-            font-size: 20px;
-            font-weight: 300;
-            margin-top: 50px;
-            }
-            li {
-                list-style: none;
-                background-color: white;
-                box-shadow: $shadow;
-                border-radius: 20px 20px 20px 20px;
-                h3 {
-                    margin: 0px;
-                    margin-top: 20px;
-                    padding-top: 15px;
-                    padding-left: 15px;
+                font-size: 20px;
+                font-weight: 300;
+                margin-top: 10px;
+                text-transform: uppercase;
+                padding-left: 20px;
+                .trait-vert {
+                    border-bottom: solid $tertiary-color;
                 }
-                p {
-                    padding-left: 15px;
-                    margin: 0px;
-                    margin-top: 5px;
-                    font-weight: 300;
+            }    
+            ul {
+                padding-left: 20px;
+                padding-right: 20px;
+                li:nth-child(2) {
+                    animation: anim-vignette 1700ms 400ms ease-in-out both;
                 }
-                span {
-                    position: relative;
-                    left: 320px;
-                    bottom: 20px;
+                li:nth-child(3) {
+                    animation: anim-vignette 1700ms 800ms ease-in-out both;
+                }
+                li:nth-child(4) {
+                    animation: anim-vignette 1700ms 1200ms ease-in-out both;
+                }
+                .vignette {
+                    display: flex;
+                    background-color: white;
+                    box-shadow: $shadow;
+                    border-radius: 12px 12px 12px 12px;
+                    margin-bottom: 30px;
+                    animation: anim-vignette 1700ms ease-in-out forwards;
+                    overflow: hidden;
+                    &:active span {
+                        transform: translateX(-5px);
+                    }
+                    &:active .check {
+                        width: 80px;
+                    }
+                    &:active .fas {
+                        transform: rotate(360deg);
+                    }
+                    &:active p, h3 {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        width: 75%;
+                    }
+
+
+/* DETAILS DU PLAT    */                     
+                    .texte-vignette {
+                        flex-direction: column;
+                        width: 100%;
+                        padding-top: 12px;
+                        padding-bottom: 12px;
+                        h3 {
+                            margin: 0px;
+                            padding-left: 15px;
+                            text-overflow: ellipsis;
+                        }
+                        .texte-detail {
+                            display: flex;
+                            justify-content: space-between;
+                            padding-left: 15px;
+                            margin: 0px;
+                            margin-top: 5px;
+                            font-weight: 300;
+                            p {
+                                margin: 0px;
+                                text-overflow: ellipsis;
+                            }
+                            span {
+                                font-weight: bold;
+                                position: relative;    
+                                right: 30px;
+                                transition: all 600ms ease-out 200ms;
+                            }
+                        }
+                    }    
+                    .check {
+                        @include flex-center;
+                        align-items: center;
+                        background: $tertiary-color;
+                        color: white;    
+                        font-size: 22px;
+                        border-radius: 0px 12px 12px 0px;  
+                        width: 0px;
+                        transition: width 600ms ease-in-out;
+                        transform-origin: right;
+                        .fas {
+                            transition: transform 600ms ease-in-out 200ms;
+                            
+                        }
+                    }
                 }
             }
         }    
+
+
+/* BOUTON COMMANDER */
         .bouton {
             @include bouton;
             display: flex;
@@ -69,16 +151,59 @@
             margin: auto;
             padding: 17px 50px 17px 50px;
             width: 120px;
-            margin-top: 80px;
-        } 
+            margin-top: 50px;
+            &:hover {
+                background: $color-degrade_light;
+                box-shadow: $shadow-more;
+            }
+        }    
+         
     }
-
-
-
-    
-
-
-
 }
 
+/* MEDIA QUERIES TABLETTE et ORDINATEUR */
+@media (min-width:426px){ 
+    .body-menu {
+        max-width: 768px;
+        margin: auto;        
+    }  
+    .main-menu {
+        .menu {
+            .nom-resto {
+                .coeur {
+                    .fas {
+                        &:hover {
+                            font-weight: 900;
+                            background : linear-gradient(45deg, #FF79DA, #9356dc);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            color: transparent;
+                            animation: select-favori 600ms forwards;
+                        }
+                    }    
+                }
+            }
+            .cat {   
+                ul {
+                    .vignette {
+                        &:hover span {
+                            transform: translateX(-5px);
+                        }
+                        &:hover .check {
+                            width: 80px;
+                        }
+                        &:hover .fas {
+                            transform: rotate(360deg);
+                        }
+                        &:hover p, h3 {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 75%;
+                        }
+                    }
+                }        
+            }
+        }
+    }
+}                       
 

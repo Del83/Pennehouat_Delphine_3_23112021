@@ -1,14 +1,11 @@
-
+/* HEADER */
 header {
     @include flex-center;
-    align-items: center;
-    box-shadow: $shadow;
     a {
-        position: relative;
-        left: 25px;
-
+        margin: auto;
         .fas {
             font-size: 20px;
+            padding-left: 20px;
         }
     }
     .header__logo {
@@ -16,26 +13,41 @@ header {
     }
 }
 
+/* MEDIA QUERIES HEADER POUR TABLETTE ET ORDINATEUR */
+@media (min-width:426px){ 
+    header {
+        .header__logo {
+            transform: scale(0.65);
+            margin: auto;
+            }
+        a {
+            margin: 30px;
+            .fas {
+                font-size: 24px;
+                padding-left: 0px;
+            }
+        }    
+    }  
+}
 
 
-
+/* FOOTER */
 footer {
     background-color: #353535;
     @include flex-column;
     .logo-nb {
         display: flex;
-        margin-right: 330px;
+        margin-right: 20em;
         margin-top: 20px;
         filter: invert(100%); 
         transform: scale(0.5);
+       
         }
     .menu-footer {
         list-style: none;
         padding-left: 20px;
         a {
             color: white;
-            text-decoration: none;
-            display: inline;
         }
         li {
             margin-top: 10px;
@@ -45,3 +57,29 @@ footer {
         }
     }
 }
+
+/* MEDIA QUERIES FOOTER POUR TABLETTE */
+@media (min-width:426px) and (max-width:768px){ 
+    footer {
+        .logo-nb {
+            margin-right: 40em;    
+        }
+    }
+}
+
+/* MEDIA QUERIES FOOTER POUR ORDINATEUR */
+@media (min-width:769px){ 
+    footer {
+        .logo-nb {
+            transform: scale(0.7);
+            margin-right: auto;   
+        }
+    }
+}
+
+
+
+
+
+
+    

@@ -17,8 +17,73 @@
 @mixin bouton {
     border-radius: 30px;
     font-size: 17px;
-    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
-    box-shadow: $shadow;
+    background: $color-degrade;
+    box-shadow: $shadow-btn;
     color: white;
     text-decoration: none;
+}
+
+/* KEYFRAME ANIMATION DU COEUR-FAVORI */
+@keyframes select-favori {
+    0% {
+        opacity: 0;
     }
+    40% {
+        opacity: 0.3;
+    }
+    75% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}  
+
+/* KEYFRAME ANIMATION DES VIGNETTES DES MENUS */
+@keyframes anim-vignette {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* KEYFRAME DU SPINNER */
+@keyframes spinner {
+    0% {
+        opacity: 1;
+        
+    }
+    80% {
+        opacity: 1;
+    }
+    99% {
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* KEYFRAME ANIMATION DU SPINNER */
+@keyframes spinner-anim{
+	0%{
+	    opacity: 0;
+        transform:scale(1);
+	}
+
+	100%{
+        opacity: 1;
+	}
+}
+
+
+
+
+
+
